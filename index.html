@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Doto:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <title>Landing page</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    #box {
+        background-color: rgba(255, 255, 255, 0);
+        width: 5%;
+        height: 7%;
+        cursor: pointer;
+        position: absolute;
+        top: 4vh;
+        left: 4vw;
+        z-index: 99;
+        }
+    #ig {
+        height: 100%;
+        width: 100%;
+    }
+    #sidebox {
+        display: grid;
+        background-color: black;
+        width: 0%;
+        text-align: center ;
+        height: 80vh;
+        position: absolute;
+        color: white;
+        padding-top: 10%;
+        overflow: hidden;
+        transition: width 0.3s ease-in;
+        z-index: 67;
+        font-family: "Manrope", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+        border-radius: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    #gallery {
+        background-color: black;
+        border-radius: 5px;
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+    #intro {
+        position: absolute;
+        top: 95%;
+        left: 45%;
+        size: 2rem;
+        color: white;
+        font-family: "Bebas Neue", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+    #about {
+        border-radius: 5px;
+        width: 80%;
+        margin-bottom: 40px;
+        position: absolute;
+        padding: 20px;
+        top: 105vh;
+        color: white;
+        margin-left: 10%;
+        font-size: 2rem;
+        font-family: "Doto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+    }
+    #cv {
+        position: absolute;
+        padding: 20px;
+        text-align: center;
+        top: 150vh;
+        width: 20%;
+        height: 20%;
+        left: 38%;
+        font-size: 2rem;
+        font-family: "Bebas Neue", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    #ev {
+        color: blue;
+    }
+    #end {
+    background-color: black;
+    border-radius: 10px; /* Smoother corners */
+    width: 99%;
+    height: 30%;
+    position: absolute;
+    top: 170%;
+    color: white;
+    border: 5px solid grey; /* Slimmer border */
+    text-align: center;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px; /* Add internal spacing */
+    font-family: 'Arial', sans-serif; /* Change font */
+    font-size: 1.2em; /* Increase font size */
+    line-height: 1.6; /* Improve line spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+/* Add hover effect for text */
+#end a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+    #hi {
+        position: absolute;
+        padding: 20px;
+        text-align: center;
+        top: 2vh;
+        width: 20%;
+        height: 20%;
+        left: 38%;
+        color: white;
+        font-size: 2rem;
+        font-family: "Bebas Neue", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="hi">PROJECTS</h1>
+    <div id="box" onclick="show()">
+        <img id="ig" src="croplogo.png"></img>
+    </div>
+    <div id="sidebox">
+        <a href="#">ALL PROJECTS</a>
+        <a href="#">UPCOMING</a>
+        <a href="#">CONNECT</a>
+        <a href="#">CONTACT ME</a>
+    </div>
+    <div id="gallery">
+        <div class="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item"></div>
+              <div class="carousel-item"></div>
+              <div class="carousel-item"></div>
+              <div class="carousel-item"></div>
+            </div>
+          </div>
+    </div>
+    <h1 id="intro">Hi ! I'm Shivam</h1>
+    <div id="about">
+        A calm and jolly individual with a natural knack for high-level conversation skills, I
+approach life with a positive and determined mindset. My unwavering work ethic
+and strong determination fuel my endeavors, making me a hardworking and
+dedicated professional. Known for managing time efficiently, I thrive in fast-paced
+environments and consistently deliver results with a cheerful attitude. I find joy in
+collaborating with others, fostering a harmonious and productive work atmosphere.
+Committed to personal and professional growth, I embrace challenges with a smile,
+always eager to contribute to the success of any team or project.
+    </div>
+    <div id="cv">
+        <a id="ev" href="Mycv.pdf" download="Mycv">SEE MY CV</a>
+    </div>
+    <div id="end">
+        CODED USING HTML / CSS / JS 
+        <a href="#">TERMS AND CONDITIONS</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">CONTACT US</a>
+        <a href="#">ABOUT US @</a>
+
+    </div>
+</body>
+<script>
+        function show() {
+            const box = document.getElementById("sidebox");
+            if(box.style.width === "20%"){
+            box.style.width = "0%";}
+            else{
+            box.style.width = "20%";
+            }
+        }
+</script>
+</html>

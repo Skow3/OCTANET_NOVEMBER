@@ -1,0 +1,236 @@
+body {
+    background-color: black;
+  }
+
+  .main {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .carousel {
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5vh;
+  }
+  .carousel-inner {
+    width: 400%;
+    height: 100%;
+    padding-left: 6.25%;
+    display: flex;
+  }
+  .carousel-item {
+    width: 40%;
+    height: 100%;
+    border: black 5px solid;
+  }
+  .carousel-item:nth-child(1) {
+    margin: 0.5%;
+    background: url(230103044-lab4-image1.png);
+    background-size: cover;
+    animation: slide1 12s 2s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .carousel-item:nth-child(2) {
+    margin: 0.5%;
+    background: url(230103044-lab4-image2.png);
+    background-size: cover;
+    animation: slide2 12s 2s infinite;
+    animation-timing-function: ease-in-out;
+    opacity: 0.5;
+  }
+  .carousel-item:nth-child(3) {
+    margin: 0.5%;
+    background: url(230103044-lab4-image3.png);
+    background-size: cover;
+    animation: slide3 12s 2s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .carousel-item:nth-child(4) {
+    margin: 0.5%;
+    background: url(230103044-lab4-image4.png);
+    background-size: cover;
+    animation: slide4 12s 2s infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes slide1 {
+    0% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    25% {
+      transform: translateX(-104%);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateX(-208%);
+      opacity: 0.5;
+    }
+    75% {
+      transform: translateX(-312%);
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes slide2 {
+    0% {
+      transform: translateX(0%);
+      opacity: 0.5;
+    }
+    25% {
+      transform: translateX(-104%);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-208%);
+      opacity: 0.5;
+    }
+    75% {
+      transform: translateX(-312%);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slide3 {
+    0% {
+      transform: translateX(0%);
+      opacity: 0.5;
+    }
+    25% {
+      transform: translateX(-104%);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateX(-208%);
+      opacity: 1;
+    }
+    75% {
+      transform: translateX(-312%);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slide4 {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-104%);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateX(-208%);
+      opacity: 0.5;
+    }
+    75% {
+      transform: translateX(-312%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .carousel1 {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-inner1 {
+    width: 400%;
+    height: 100%;
+    display: flex;
+  }
+  .carousel-item1 {
+    width: 25%;
+    height: 100%;
+    border: black 5px solid;
+    animation: slides 12s 2s infinite;
+    animation-timing-function: linear;
+  }
+  .carousel-item1:nth-child(1) {
+    background: url(230103044-lab4-image1.png);
+    background-size: cover;
+    
+  }
+  .carousel-item1:nth-child(2) {
+    background: url(230103044-lab4-image2.png);
+    background-size: cover;
+  }
+  .carousel-item1:nth-child(3) {
+    background: url(230103044-lab4-image3.png);
+    background-size: cover;
+  }
+  .carousel-item1:nth-child(4) {
+    background: url(230103044-lab4-image4.png);
+    background-size: cover;
+  }
+
+  @keyframes slides {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
+  .carousel2 {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-inner2 {
+    width: 400%;
+    height: 100%;
+    display: flex;
+  }
+  .carousel-item2 {
+    width: 25%;
+    height: 100%;
+    border: black 5px solid;
+    animation: slide01 12s 2s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .carousel-item2:nth-child(1) {
+    background: url(230103044-lab4-image1.png);
+    background-size: cover;
+    
+  }
+  .carousel-item2:nth-child(2) {
+    background: url(230103044-lab4-image2.png);
+    background-size: cover;
+  }
+  .carousel-item2:nth-child(3) {
+    background: url(230103044-lab4-image3.png);
+    background-size: cover;
+  }
+  .carousel-item2:nth-child(4) {
+    background: url(230103044-lab4-image4.png);
+    background-size: cover;
+  }
+
+  @keyframes slide01 {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(-0%);
+    }
+  }
