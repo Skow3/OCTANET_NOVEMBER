@@ -1,62 +1,83 @@
 body {
     background-color: black;
-  }
+}
 
-  .main {
+.main {
     color: white;
     width: 100%;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
-  }
+}
 
-  .carousel {
+.carousel {
     height: 75vh;
     position: relative;
     overflow: hidden;
     padding-bottom: 5vh;
-  }
-  .carousel-inner {
+}
+
+.carousel-inner {
     width: 400%;
     height: 100%;
     padding-left: 6.25%;
     display: flex;
-  }
-  .carousel-item {
+}
+
+.carousel-item {
     width: 40%;
     height: 100%;
     border: black 5px solid;
-  }
-  .carousel-item:nth-child(1) {
+}
+
+.carousel-item:nth-child(1) {
     margin: 0.5%;
     background: url(230103044-lab4-image1.png);
     background-size: cover;
-    animation: slide1 12s 2s infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .carousel-item:nth-child(2) {
+    background-position: center;
+    animation: slide1 12s 2s infinite ease-in-out;
+}
+
+.carousel-item:nth-child(2) {
     margin: 0.5%;
     background: url(230103044-lab4-image2.png);
     background-size: cover;
-    animation: slide2 12s 2s infinite;
-    animation-timing-function: ease-in-out;
+    background-position: center;
+    animation: slide2 12s 2s infinite ease-in-out;
     opacity: 0.5;
-  }
-  .carousel-item:nth-child(3) {
+}
+
+.carousel-item:nth-child(3) {
     margin: 0.5%;
     background: url(230103044-lab4-image3.png);
     background-size: cover;
-    animation: slide3 12s 2s infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .carousel-item:nth-child(4) {
+    background-position: center;
+    animation: slide3 12s 2s infinite ease-in-out;
+}
+
+.carousel-item:nth-child(4) {
     margin: 0.5%;
     background: url(230103044-lab4-image4.png);
     background-size: cover;
-    animation: slide4 12s 2s infinite;
-    animation-timing-function: ease-in-out;
-  }
+    background-position: center;
+    animation: slide4 12s 2s infinite ease-in-out;
+}
 
-  @keyframes slide1 {
+@keyframes slide1 {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-104%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide1 {
     0% {
       transform: translateX(0%);
       opacity: 1;
@@ -139,85 +160,8 @@ body {
       transform: translateX(0%);
     }
   }
-  .carousel1 {
-    height: 90vh;
-    position: relative;
-    overflow: hidden;
-  }
-  .carousel-inner1 {
-    width: 400%;
-    height: 100%;
-    display: flex;
-  }
-  .carousel-item1 {
-    width: 25%;
-    height: 100%;
-    border: black 5px solid;
-    animation: slides 12s 2s infinite;
-    animation-timing-function: linear;
-  }
-  .carousel-item1:nth-child(1) {
-    background: url(230103044-lab4-image1.png);
-    background-size: cover;
-    
-  }
-  .carousel-item1:nth-child(2) {
-    background: url(230103044-lab4-image2.png);
-    background-size: cover;
-  }
-  .carousel-item1:nth-child(3) {
-    background: url(230103044-lab4-image3.png);
-    background-size: cover;
-  }
-  .carousel-item1:nth-child(4) {
-    background: url(230103044-lab4-image4.png);
-    background-size: cover;
-  }
 
-  @keyframes slides {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-300%);
-    }
-  }
-  .carousel2 {
-    height: 90vh;
-    position: relative;
-    overflow: hidden;
-  }
-  .carousel-inner2 {
-    width: 400%;
-    height: 100%;
-    display: flex;
-  }
-  .carousel-item2 {
-    width: 25%;
-    height: 100%;
-    border: black 5px solid;
-    animation: slide01 12s 2s infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .carousel-item2:nth-child(1) {
-    background: url(230103044-lab4-image1.png);
-    background-size: cover;
-    
-  }
-  .carousel-item2:nth-child(2) {
-    background: url(230103044-lab4-image2.png);
-    background-size: cover;
-  }
-  .carousel-item2:nth-child(3) {
-    background: url(230103044-lab4-image3.png);
-    background-size: cover;
-  }
-  .carousel-item2:nth-child(4) {
-    background: url(230103044-lab4-image4.png);
-    background-size: cover;
-  }
-
-  @keyframes slide01 {
+@keyframes slides {
     0% {
       transform: translateX(0%);
     }
@@ -234,3 +178,30 @@ body {
       transform: translateX(-0%);
     }
   }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel {
+        height: 60vh;
+    }
+    .carousel-item {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .carousel-inner {
+        padding-left: 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 50vh;
+    }
+    .carousel-item {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .carousel-inner {
+        flex-direction: column;
+    }
+}
